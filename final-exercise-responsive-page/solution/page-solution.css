@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* --- HERO --- */
+
+/* TASK 3 ✅ — vw / vh
+   width: 100vw  → the hero always fills the full width of the screen,
+                   no matter what device or screen size.
+   height: 100vh → the hero always fills the full height of the screen,
+                   so the content below is only visible on scroll. */
+.hero {
+  background: #367DF3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* TASK 2 ✅ — rem
+   Font sizes are set in rem, not px.
+   rem is relative to the root font size (usually 16px).
+   This means: 2.5rem = 40px, 1.125rem = 18px.
+   If the user changes their browser font size, everything scales proportionally. */
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+/* --- CONTAINER --- */
+
+/* TASK 1 ✅ — percent
+   width: 90% means the container always takes 90% of the screen width.
+   On a 375px screen  → 337px wide.
+   On a 1200px screen → 1080px wide.
+   margin: 0 auto centers it horizontally on any screen. */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* TASK 2 ✅ — rem */
+.container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* --- CARDS --- */
+
+/* TASK 4 ✅ — mobile first
+   flex-direction: column is the default — cards stack vertically.
+   This is the mobile layout. No media query needed for mobile.
+   We only add a media query to change the layout on larger screens. */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* flex: 1 means each card takes an equal share of the available width.
+   This ensures cards are always the same size, no matter how many there are. */
+.card {
+  flex: 1;
+  border-radius: 14px;
+  padding: 1.5rem;
+  color: white;
+}
+
+/* TASK 2 ✅ — rem */
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.card-blue   { background: #367DF3; }
+.card-coral  { background: #F06E6C; }
+.card-purple { background: #7B5CF5; }
+
+/* TASK 4 ✅ — media query
+   This rule only applies when the screen is 768px or wider.
+   On smaller screens it is completely ignored.
+   flex-direction: row switches the cards from a vertical stack to a horizontal row.
+   Combined with flex: 1 on .card, each card takes equal space in the row. */
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+  }
+}

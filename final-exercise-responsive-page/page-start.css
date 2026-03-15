@@ -1,0 +1,113 @@
+/* ============================================
+   RESPONSIVE PAGE — Final Exercise
+   ============================================
+
+   Your mission: make this page fully responsive.
+   Choose any topic you like — fitness, food, travel, music...
+   Complete the tasks below one by one.
+
+   TASK 1 — PERCENT
+   Set .container width using % so it adapts to any screen.
+   Example: width: 90%;
+
+   TASK 2 — REM
+   Set font sizes using rem instead of px.
+   Example: font-size: 1.5rem;
+
+   TASK 3 — VW / VH
+   Make the hero fill the full screen width and height.
+   Example: width: 100vw; height: 100vh;
+
+   TASK 4 — MEDIA QUERY
+   Add a media query so cards display in a row on screens 768px and wider.
+   @media (min-width: 768px) {
+     .cards { flex-direction: row; }
+   }
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* --- HERO --- */
+.hero {
+  background: #367DF3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+
+  /* TASK 3: replace these with vw and vh */
+  width: 800px;
+  height: 400px;
+}
+
+.hero h1 {
+  /* TASK 2: replace with rem */
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  /* TASK 2: replace with rem */
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* --- CONTAINER --- */
+.container {
+  /* TASK 1: replace with % */
+  width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.container h2 {
+  /* TASK 2: replace with rem */
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* --- CARDS --- */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  /* TASK 2: replace with rem */
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  /* TASK 2: replace with rem */
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* TASK 4: add your media query here */

@@ -1,0 +1,67 @@
+/* All font sizes are in rem — they all scale together
+   based on the html font-size below.
+
+   On a wide screen this looks okay-ish.
+   But open it on mobile — the heading is way too big.
+
+   TODO: change html font-size from 24px to 16px.
+         That is the only change you need to make. */
+
+html {
+  font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.container {
+  width: 100%;
+  padding: 3rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.program {
+  border-left: 4px solid #367DF3;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 0 12px 12px 0;
+}
+
+.program h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.program p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
